@@ -333,4 +333,5 @@ For support, email support@digibazar.com or open an issue in the repository.
 ---
 
 **Happy Shopping! 🛍️**#   d i g i B a z a r  
+ #   D i g i B a z a r  
  
