@@ -1,5 +1,18 @@
 // ==================== CONFIGURATION ====================
-const API_URL = 'http://localhost:5000/api';
+// Automatically detect if running locally or on network
+const getApiUrl = () => {
+  const hostname = window.location.hostname;
+  
+  // If accessing via localhost, use localhost
+  if (hostname === 'localhost' || hostname === '127.0.0.1') {
+    return 'http://localhost:5000/api';
+  }
+  
+  // Otherwise, use the same hostname as the frontend
+  return `http://${hostname}:5000/api`;
+};
+
+const API_URL = getApiUrl();
 let currentUser = null;
 let cart = [];
 let products = [];
